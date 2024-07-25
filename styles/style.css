@@ -52,7 +52,7 @@ textarea::placeholder {
 .warning_text {
     font-family: var(--fuente-inter);
     font-weight: 200;
-    font-size: small;
+    font-size: 0.8rem;
     position: relative;
-    left: 20%;
+    left: 20.5%;
 }
