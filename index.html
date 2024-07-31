@@ -10,15 +10,26 @@
 
 <body>
     <header>
-        <img src="assets/Logo.png">
+        <img src="assets/Logo.png" alt="alura-logo">
     </header>
-    <main>
+    <main class="encriptador__contenido">
         <div class="input_text_area">
             <textarea placeholder="Ingrese su texto"></textarea>
-        </div>
-        <div class="text_warning_textarea">
-            <img class="warning_logo" src="assets/bi_exclamation-circle-fill.png">
+            <img class="warning_logo" src="assets/bi_exclamation-circle-fill.png" alt="warning-logo">
             <p class="warning_text">Solo letras minusculas y sin acentos</p>
+            <div class="buttons">
+                <button class="encriptar__button">Encriptar</button>
+                <button class="desencriptar__button">Desencriptar</button>
+            </div>
+        </div>
+        <div class="output_text_area">
+            <!-- <span class="second-text-overlay">Ningún mensaje fue encontrado</span> -->
+            <textarea placeholder=""></textarea>
+            <div class="placeholder__text">
+                <span class="text-overlay">Ningún mensaje fue encontrado</span>
+                <span class="second-text-overlay">Ingresa el texto que desees encriptar o desencriptar.</span>
+            </div>
+            <button class="copiar__button">Copiar</button>
         </div>
     </main>
     <footer></footer>

@@ -11,27 +11,41 @@
 
 body {
     box-sizing: border-box;
+    background-color: #E5E5E5;
+}
+
+header {
+    padding: 2% 0 0 2% ;
+    width: fit-content;
+}
+
+.encriptador__contenido {
+    display: flex;
+    gap: 5%;
 }
 
 .input_text_area {
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding: 0% 15%;
-
+    padding-left: 5%;
+    /* padding: 0% 10%; */
 }
 
-textarea {
+.input_text_area textarea {
     font-family: var(--fuente-inter);
+    background-color: #E5E5E5;
     font-size: 2rem;
+    width: 75%;
+    height: auto;
     resize: none;
     border-color: rgb(255, 0, 0);
-    padding:5% 2% 30%;
+    padding:10% 10% 50%;
     caret-color: rgb(34, 32, 32);
-   /*  border-style: none;
-    border-color: Transparent; */
+  /*   border-style: none;
+    border-color: Transparent;
     overflow: auto;
-   /*  outline: none; */
+    outline: none; */
 }
 
 textarea::placeholder {
@@ -40,19 +54,135 @@ textarea::placeholder {
 
 }
 
-.text_warning_textarea {
-    display: flex;
-}
-
 .warning_logo {
-    position: relative;
-    left: 20%;
+    display: flex;
+    width: fit-content;
+    margin-left: 10%;
 }
-
 .warning_text {
+    width: fit-content;
+    position: relative;
+    bottom: 15px;
     font-family: var(--fuente-inter);
     font-weight: 200;
     font-size: 0.8rem;
+    margin-left: 14%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 10%;
+}
+
+.encriptar__button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 0;
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #1e40af ;
+    border: 1px solid #000000;
+}
+
+.desencriptar__button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 0;
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    font-weight: 400;
+    color: #1e40af;
+    background-color: #D8DFE8 ;
+    border: 1px solid #1e40af;
+}
+
+
+.output_text_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 32px ;
+    margin-top: -40px;
+    padding:2% 5%;
+    width: 10%;
+}
+
+.placeholder__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     position: relative;
-    left: 20.5%;
+    gap: 20px;
+    padding-bottom: 30%;
+}
+
+.text-overlay {
+    font-family: var(--fuente-inter);
+    font-weight: 600;
+    color: #666;
+/*     position: relative;
+    bottom: 15%; */
+    /* text-align: center; */
+
+    font-size: 24px;
+    width: auto;
+  }
+
+  .second-text-overlay {
+    font-family: var(--fuente-inter);
+    font-weight: 400;
+    color: #666;
+/*     position: relative;
+    bottom: 15%; */
+   /*  text-align: center; */
+    font-size: 16px;
+    width: auto;
+  }
+
+.output_text_area textarea{
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+    height: 100%;
+    width: 150%;
+    padding: 1%;
+    resize: none;
+    border-radius: 32px ;
+    border-color: rgb(255, 0, 0);
+    caret-color: rgb(34, 32, 32);
+    border-style: none;
+    border-color: Transparent;
+    overflow: auto;
+    outline: none;
+}
+
+.copiar__button {
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    font-weight: 400;
+    color: #1e40af;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+.output_text_area textarea:placeholder-shown {
+    background: url('/assets/Muñeco.png') white calc(50% + 10px) calc(50% + 10px) no-repeat;
+    min-width: 100%;
+}
+
+.output_text_area textarea:not(:placeholder-shown) + .placeholder__text {
+    display: none;
 }
