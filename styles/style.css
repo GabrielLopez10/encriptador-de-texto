@@ -2,6 +2,12 @@
 
 :root {
     --fuente-inter: "Inter", sans-serif;
+    --color-primario: #E5E5E5;
+    --color-secundario: #1e40af;
+    --color-terciario: #666;
+    --color-border-button: #000000;
+    --color-background: #ffffff;
+    --font-size-primario: 2rem;
 }
 
 * {
@@ -11,7 +17,7 @@
 
 body {
     box-sizing: border-box;
-    background-color: #E5E5E5;
+    background-color: var(--color-primario);
 }
 
 header {
@@ -34,22 +40,21 @@ header {
 
 .input_text_area textarea {
     font-family: var(--fuente-inter);
-    background-color: #E5E5E5;
-    font-size: 2rem;
+    background-color: var(--color-primario);
+    font-size: var(--font-size-primario);
     width: 75%;
     height: auto;
     resize: none;
-    border-color: rgb(255, 0, 0);
     padding:10% 10% 50%;
     caret-color: rgb(34, 32, 32);
     border-style: none;
     border-color: Transparent;
-    overflow: auto;
+    overflow: hidden;
     outline: none;
 }
 
 textarea::placeholder {
-    font-size: 2rem;
+    font-size: var(--font-size-primario);
     color: blue;
 
 }
@@ -86,8 +91,8 @@ textarea::placeholder {
     font-size: 16px;
     font-weight: 400;
     color: #ffffff;
-    background-color: #1e40af ;
-    border: 1px solid #000000;
+    background-color: var(--color-secundario) ;
+    border: 1px solid var(--color-border-button);
 }
 
 .desencriptar__button {
@@ -99,9 +104,9 @@ textarea::placeholder {
     font-family: var(--fuente-inter);
     font-size: 16px;
     font-weight: 400;
-    color: #1e40af;
+    color: var(--color-secundario);
     background-color: #D8DFE8 ;
-    border: 1px solid #1e40af;
+    border: 1px solid var(--color-secundario);
 }
 
 
@@ -112,8 +117,8 @@ textarea::placeholder {
     align-items: center;
     background-color: white;
     border-radius: 32px ;
-    margin-top: -40px;
-    padding:2% 5%;
+    margin-top: 0px;
+    padding:1% 5%;
     width: 10%;
 }
 
@@ -123,17 +128,13 @@ textarea::placeholder {
     text-align: center;
     position: relative;
     gap: 20px;
-    padding-bottom: 30%;
+    padding-bottom: 60%;
 }
 
 .text-overlay {
     font-family: var(--fuente-inter);
     font-weight: 600;
-    color: #666;
-/*     position: relative;
-    bottom: 15%; */
-    /* text-align: center; */
-
+    color: var(--color-terciario);
     font-size: 24px;
     width: auto;
   }
@@ -141,27 +142,22 @@ textarea::placeholder {
   .second-text-overlay {
     font-family: var(--fuente-inter);
     font-weight: 400;
-    color: #666;
-/*     position: relative;
-    bottom: 15%; */
-   /*  text-align: center; */
+    color: var(--color-terciario);
     font-size: 16px;
     width: auto;
   }
 
 .output_text_area textarea{
     font-family: var(--fuente-inter);
-    font-size: 2rem;
-    height: 100%;
+    font-size: var(--font-size-primario);
+    height: 90%;
     width: 150%;
-    padding: 1%;
+    padding: 5%;
     resize: none;
     border-radius: 32px ;
-    border-color: rgb(255, 0, 0);
-    caret-color: rgb(34, 32, 32);
     border-style: none;
     border-color: Transparent;
-    overflow: auto;
+    overflow: hidden;
     outline: none;
 }
 
@@ -173,13 +169,13 @@ textarea::placeholder {
     font-family: var(--fuente-inter);
     font-size: 16px;
     font-weight: 400;
-    color: #1e40af;
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    color: var(--color-secundario);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border-button);
 }
 
 .output_text_area textarea:placeholder-shown {
-    background: url('/assets/Muñeco.png') white calc(50% + 10px) calc(50% + 10px) no-repeat;
+    background: url('/assets/Muñeco.png') var(--color-background) calc(50% + 10px) calc(50% + 10px) no-repeat;
     min-width: 100%;
 }
 
@@ -193,8 +189,6 @@ textarea::placeholder {
         justify-content: center;
         align-items: center;
         gap:50px;
-        width: auto;
-        height: auto;
     }
 
     .input_text_area {
@@ -204,7 +198,7 @@ textarea::placeholder {
 
     .input_text_area textarea {
         width: 100%;
-        padding:5% 0% 40%;
+        padding:5% 0% 10%;
     }
 
     .output_text_area + .placeholder__text {
@@ -221,7 +215,7 @@ textarea::placeholder {
         width: 50%;
         position: absolute;
         gap: 20px;
-        padding-bottom: 5%;
+        padding-bottom: 1%;
     }
 
     .output_text_area {
@@ -231,11 +225,11 @@ textarea::placeholder {
 
     .output_text_area textarea{
         width: 75%;
-        padding: 5% 5%;
+        padding: 5% 0%;
     }
 
     .output_text_area textarea:placeholder-shown {
-        background: #ffffff;
+        background: var(--color-background);
         min-width: 80%;
     }
 
@@ -244,9 +238,31 @@ textarea::placeholder {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:1080px) {
     .output_text_area textarea:placeholder-shown {
         padding: 15% 5%;
     }
 
+}
+
+@media (max-width:768px) {
+
+    header {
+        padding: 5% 0 0 2% ;
+        width: fit-content;
+    }
+    .output_text_area textarea:placeholder-shown {
+        padding: 20% 5%;
+    }
+
+    .input_text_area textarea {
+        width: 100%;
+        padding:10% 0% 30%;
+    }
+}
+
+@media (max-width:480px) {
+    .output_text_area textarea:placeholder-shown {
+        padding: 45% 5%;
+    }
 }
