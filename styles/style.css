@@ -42,10 +42,10 @@ header {
     border-color: rgb(255, 0, 0);
     padding:10% 10% 50%;
     caret-color: rgb(34, 32, 32);
-  /*   border-style: none;
+    border-style: none;
     border-color: Transparent;
     overflow: auto;
-    outline: none; */
+    outline: none;
 }
 
 textarea::placeholder {
@@ -185,4 +185,68 @@ textarea::placeholder {
 
 .output_text_area textarea:not(:placeholder-shown) + .placeholder__text {
     display: none;
+}
+
+@media (max-width:1600px) {
+    .encriptador__contenido {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:50px;
+        width: auto;
+        height: auto;
+    }
+
+    .input_text_area {
+        padding: 1%;
+        width: 75%;
+    }
+
+    .input_text_area textarea {
+        width: 100%;
+        padding:5% 0% 40%;
+    }
+
+    .output_text_area + .placeholder__text {
+        flex-direction: row;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .placeholder__text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 50%;
+        position: absolute;
+        gap: 20px;
+        padding-bottom: 5%;
+    }
+
+    .output_text_area {
+        width: 75%;
+        padding: 1%;
+    }
+
+    .output_text_area textarea{
+        width: 75%;
+        padding: 5% 5%;
+    }
+
+    .output_text_area textarea:placeholder-shown {
+        background: #ffffff;
+        min-width: 80%;
+    }
+
+    .copiar__button {
+        width: 50%;
+    }
+}
+
+@media (max-width:768px) {
+    .output_text_area textarea:placeholder-shown {
+        padding: 15% 5%;
+    }
+
 }
