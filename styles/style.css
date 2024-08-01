@@ -71,7 +71,7 @@ textarea::placeholder {
     font-family: var(--fuente-inter);
     font-weight: 200;
     font-size: 0.8rem;
-    margin-left: 14%;
+    margin-left: 12%;
 }
 
 .buttons{
@@ -225,7 +225,7 @@ textarea::placeholder {
 
     .output_text_area textarea{
         width: 75%;
-        padding: 5% 0%;
+        padding: 10% 10%;
     }
 
     .output_text_area textarea:placeholder-shown {
@@ -257,7 +257,11 @@ textarea::placeholder {
 
     .input_text_area textarea {
         width: 100%;
-        padding:10% 0% 30%;
+        padding:15% 0% 30%;
+    }
+
+    .warning_text {
+        margin-left: 17%;
     }
 }
 
