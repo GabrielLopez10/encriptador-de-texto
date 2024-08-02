@@ -35,7 +35,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 50%;
-    gap: 10px;
+    gap: 15px;
 }
 
 .input_text_area textarea {
@@ -112,6 +112,7 @@ textarea::placeholder {
     margin-top: 0;
     padding:1% 5%;
     width: 10%;
+    height: 80vh;
 }
 
 .placeholder__text {
@@ -142,7 +143,7 @@ textarea::placeholder {
 .output_text_area textarea{
     font-family: var(--fuente-inter);
     font-size: var(--font-size-primario);
-    height: 90%;
+    height: 100vh;
     width: 150%;
     padding: 5%;
     resize: none;
@@ -206,17 +207,19 @@ textarea::placeholder {
         width: 65%;
         position: absolute;
         gap: 20px;
-        padding-bottom: 1%;
+        padding-bottom: 0;
     }
 
     .output_text_area {
         width: 75%;
         padding: 1%;
+        height: 30vh;
     }
 
     .output_text_area textarea{
         width: 75%;
-        padding: 10% 10%;
+        padding: 3% 5%;
+        height: 20vh;
     }
 
     .output_text_area textarea:placeholder-shown {
@@ -225,7 +228,8 @@ textarea::placeholder {
     }
 
     .copiar__button {
-        width: 50%;
+        width: 75%;
+        margin: 10px;
     }
 }
 
@@ -235,12 +239,17 @@ textarea::placeholder {
         padding: 5% 0 0 2% ;
         width: fit-content;
     }
+
+    .output_text_area {
+        padding: 5% 5%;
+    }
+
     .output_text_area textarea:placeholder-shown {
         padding: 20% 5%;
     }
 
     .input_text_area textarea {
-        padding:10% 0 25%;
+        padding:5% 0 20%;
     }
 }
 
@@ -248,6 +257,11 @@ textarea::placeholder {
     header {
         padding: 5% 1% ;
         width: fit-content;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .encriptador__contenido {
@@ -258,5 +272,9 @@ textarea::placeholder {
     }
     .output_text_area textarea:placeholder-shown {
         padding: 25% 5%;
+    }
+
+    .output_text_area {
+        height: 40vh;
     }
 }
