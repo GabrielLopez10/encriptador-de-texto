@@ -4,7 +4,7 @@
     --fuente-inter: "Inter", sans-serif;
     --color-primario: #E5E5E5;
     --color-secundario: #1e40af;
-    --color-terciario: #666;
+    --color-terciario: #3f3e3e;
     --color-border-button: #000000;
     --color-background: #ffffff;
     --font-size-primario: 2rem;
@@ -27,6 +27,7 @@ header {
 
 .encriptador__contenido {
     display: flex;
+    justify-content: center;
     gap: 5%;
 }
 
@@ -34,18 +35,17 @@ header {
     display: flex;
     flex-direction: column;
     width: 50%;
-    padding-left: 5%;
-    /* padding: 0% 10%; */
+    gap: 10px;
 }
 
 .input_text_area textarea {
     font-family: var(--fuente-inter);
     background-color: var(--color-primario);
     font-size: var(--font-size-primario);
-    width: 75%;
+    width: 100%;
     height: auto;
     resize: none;
-    padding:10% 10% 50%;
+    padding:10% 0 50%;
     caret-color: rgb(34, 32, 32);
     border-style: none;
     border-color: Transparent;
@@ -59,26 +59,18 @@ textarea::placeholder {
 
 }
 
-.warning_logo {
-    display: flex;
-    width: fit-content;
-    margin-left: 10%;
-}
 .warning_text {
-    width: fit-content;
-    position: relative;
-    bottom: 15px;
+    display: flex;
     font-family: var(--fuente-inter);
     font-weight: 200;
     font-size: 0.8rem;
-    margin-left: 12%;
+    gap:5px
 }
 
 .buttons{
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin-left: 10%;
 }
 
 .encriptar__button {
@@ -117,7 +109,7 @@ textarea::placeholder {
     align-items: center;
     background-color: white;
     border-radius: 32px ;
-    margin-top: 0px;
+    margin-top: 0;
     padding:1% 5%;
     width: 10%;
 }
@@ -197,8 +189,7 @@ textarea::placeholder {
     }
 
     .input_text_area textarea {
-        width: 100%;
-        padding:5% 0% 10%;
+        padding:5% 0 15%;
     }
 
     .output_text_area + .placeholder__text {
@@ -212,7 +203,7 @@ textarea::placeholder {
         display: flex;
         flex-direction: column;
         text-align: center;
-        width: 50%;
+        width: 65%;
         position: absolute;
         gap: 20px;
         padding-bottom: 1%;
@@ -238,14 +229,7 @@ textarea::placeholder {
     }
 }
 
-@media (max-width:1080px) {
-    .output_text_area textarea:placeholder-shown {
-        padding: 15% 5%;
-    }
-
-}
-
-@media (max-width:768px) {
+@media (min-width:480px) and (max-width:1080px) {
 
     header {
         padding: 5% 0 0 2% ;
@@ -256,17 +240,23 @@ textarea::placeholder {
     }
 
     .input_text_area textarea {
-        width: 100%;
-        padding:15% 0% 30%;
-    }
-
-    .warning_text {
-        margin-left: 17%;
+        padding:10% 0 25%;
     }
 }
 
 @media (max-width:480px) {
+    header {
+        padding: 5% 1% ;
+        width: fit-content;
+    }
+
+    .encriptador__contenido {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:25px;
+    }
     .output_text_area textarea:placeholder-shown {
-        padding: 45% 5%;
+        padding: 25% 5%;
     }
 }
