@@ -168,7 +168,7 @@ textarea::placeholder {
 }
 
 .output_text_area textarea:placeholder-shown {
-    background: url('../assets/Muñeco.png') calc(50% + 10px) calc(50% + 10px) no-repeat;
+    background: url('../assets/persona.png') calc(50% + 10px) calc(50% + 10px) no-repeat;
     min-width: 100%;
 }
 
