@@ -168,7 +168,7 @@ textarea::placeholder {
 }
 
 .output_text_area textarea:placeholder-shown {
-    background: url('assets/Muñeco.png') var(--color-background) calc(50% + 10px) calc(50% + 10px) no-repeat;
+    background: url('https://github.com/GabrielLopez10/encriptador-de-texto/blob/main/assets/Mu%C3%B1eco.png') var(--color-background) calc(50% + 10px) calc(50% + 10px) no-repeat;
     min-width: 100%;
 }
 
