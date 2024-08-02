@@ -109,10 +109,10 @@ textarea::placeholder {
     align-items: center;
     background-color: white;
     border-radius: 32px ;
-    margin-top: 0;
     padding:1% 5%;
     width: 10%;
     height: 80vh;
+    margin: 1%;
 }
 
 .placeholder__text {
@@ -176,12 +176,25 @@ textarea::placeholder {
     display: none;
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--color-secundario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
 @media (max-width:1600px) {
     .encriptador__contenido {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap:50px;
+        gap:15px;
     }
 
     .input_text_area {
@@ -241,11 +254,11 @@ textarea::placeholder {
     }
 
     .output_text_area {
-        padding: 1% 5%;
+        padding: 9% 5%;
     }
 
     .output_text_area textarea:placeholder-shown {
-        padding: 20% 5%;
+        padding: 15% 5%;
     }
 
     .input_text_area textarea {
