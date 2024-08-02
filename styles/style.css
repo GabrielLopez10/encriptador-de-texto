@@ -18,7 +18,6 @@
 body {
     box-sizing: border-box;
     background-color: var(--color-primario);
-    background-image: url('../assets/persona.png');
 }
 
 header {
