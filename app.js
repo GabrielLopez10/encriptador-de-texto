@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (containsUppercase(inputText)) {
                 warningSymbolSpan.textContent = warningSymbol;
                 warningTextSpan.textContent =
-                    "LETRAS MAYÚSCULAS DETECTADAS. EL TEXTO SE CONVERTIRA A MINÚSCULA";
+                    "LETRAS MAYÚSCULAS DETECTADAS. EL TEXTO SE CONVERTIRÁ A MINÚSCULA";
                 warningMessage.style.display = "block";
             } else {
                 warningMessage.style.display = "none";
