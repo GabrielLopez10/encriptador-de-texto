@@ -7,6 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const copiarButton = document.getElementsByClassName("copiar__button")[0];
     const inputTextarea = document.getElementsByTagName("textarea")[0];
     const outputTextarea = document.getElementsByTagName("textarea")[1];
+    const warningMessage = document.getElementsByClassName(
+        "uppercase__warning__message"
+    )[0];
+    const warningSymbolSpan = document.getElementsByClassName(
+        "uppercase__warning__symbol"
+    )[0];
+    const warningTextSpan = document.getElementsByClassName(
+        "uppercase__warning__text"
+    )[0];
 
     const cifrado = {
         e: "enter",
@@ -23,9 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
     //Botón Copiar permanece oculto si no se efectua acción alguna
     copiarButton.style.display = "none";
 
+    function containsUppercase(texto) {
+        return /[A-Z]/.test(texto);
+    }
+
     function encriptar(texto) {
         return texto
             .toLowerCase()
+            .replace(/[^a-z0-9\s]/g, "")
             .split("")
             .map((char) => cifrado[char] || char)
             .join("");
@@ -41,13 +55,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add click event listener to the first button
     encriptarButton.addEventListener("click", () => {
-        if (inputTextarea.value.trim() !== "") {
+        const warningSymbol = "⚠️ ";
+        const inputText = inputTextarea.value.trim();
+
+        if (inputText != "") {
+            const outputText = encriptar(inputText);
+            if (containsUppercase(inputText)) {
+                warningSymbolSpan.textContent = warningSymbol;
+                warningTextSpan.textContent =
+                    "LETRAS MAYÚSCULAS DETECTADAS. EL TEXTO SE CONVERTIRA A MINÚSCULA";
+                warningMessage.style.display = "block";
+            } else {
+                warningMessage.style.display = "none";
+            }
+            outputTextarea.value = outputText;
+            copiarButton.style.display = "block";
+        } else {
+            warningMessage.style.display = "none";
+            outputTextarea.value = "";
+            copiarButton.style.display = "none";
+        }
+
+        /*  if (inputTextarea.value.trim() !== "") {
             outputTextarea.value = encriptar(inputTextarea.value);
             copiarButton.style.display = "block";
         } else {
             outputTextarea.value = "";
             copiarButton.style.display = "none";
-        }
+        } */
     });
 
     desencriptarButton.addEventListener("click", () => {
@@ -62,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     copiarButton.addEventListener("click", () => {
         let copiarTexto = navigator.clipboard.writeText(outputTextarea.value);
-        alert("Text copied to clipboard!");
+        alert("Texto copiado!");
         return copiarTexto;
     });
 });
