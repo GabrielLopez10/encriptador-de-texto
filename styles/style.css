@@ -69,11 +69,11 @@ textarea::placeholder {
 
 .buttons{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     gap: 10px;
 }
 
-.encriptar__button {
+.encriptar__button, .desencriptar__button {
     width: 100%;
     justify-content: center;
     text-align: center;
@@ -82,23 +82,25 @@ textarea::placeholder {
     font-family: var(--fuente-inter);
     font-size: 16px;
     font-weight: 400;
+}
+
+.encriptar__button {
     color: #ffffff;
     background-color: var(--color-secundario) ;
     border: 1px solid var(--color-border-button);
 }
 
 .desencriptar__button {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    padding: 24px 0;
-    border-radius: 24px;
-    font-family: var(--fuente-inter);
-    font-size: 16px;
-    font-weight: 400;
     color: var(--color-secundario);
     background-color: #D8DFE8 ;
     border: 1px solid var(--color-secundario);
+}
+
+.encriptar__button:hover, .desencriptar__button:hover, .copiar__button:hover {
+    transform: translate(1px, 1px);
+    box-shadow: -1px -1px 0 rgba(0,0,0,0.1);
+    border-width: 2px;
+    cursor: pointer;
 }
 
 
